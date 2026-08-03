@@ -26,3 +26,24 @@ keyboardInput.addEventListener("keyup", function (event) {
     keyboardMessage.textContent =
         "The last key you pressed was: " + event.key;
 });
+
+
+         // Form Events:
+
+// Select the form elements
+const messageForm = document.getElementById("messageForm");
+const nameInput = document.getElementById("nameInput");
+const formMessage = document.getElementById("formMessage");
+
+// Handle the form submission
+messageForm.addEventListener("submit", function (event) {
+    // Prevent the page from refreshing
+    event.preventDefault();
+
+    // Display a submission message
+    formMessage.textContent =
+        "Thank you, " + nameInput.value + "! Your form was submitted.";
+
+    // Clear the input field
+    nameInput.value = "";
+});
