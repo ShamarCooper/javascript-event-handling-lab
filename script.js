@@ -47,3 +47,21 @@ messageForm.addEventListener("submit", function (event) {
     // Clear the input field
     nameInput.value = "";
 });
+
+
+     // Focus Events:
+
+
+// Select the focus event elements
+const focusInput = document.getElementById("focusInput");
+const focusMessage = document.getElementById("focusMessage");
+
+// Runs when the input gains focus
+focusInput.addEventListener("focus", function () {
+    focusMessage.textContent = "The input field is active.";
+});
+
+// Runs when the input loses focus
+focusInput.addEventListener("blur", function () {
+    focusMessage.textContent = "The input field is no longer active.";
+});
