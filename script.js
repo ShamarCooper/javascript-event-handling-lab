@@ -65,3 +65,20 @@ focusInput.addEventListener("focus", function () {
 focusInput.addEventListener("blur", function () {
     focusMessage.textContent = "The input field is no longer active.";
 });
+
+
+        // Event Delegation:
+
+// Select the event delegation elements
+const buttonContainer = document.getElementById("buttonContainer");
+const delegationMessage =
+    document.getElementById("delegationMessage");
+
+// Add one click event to the container
+buttonContainer.addEventListener("click", function (event) {
+    // Check whether the clicked element is a button
+    if (event.target.matches("button")) {
+        delegationMessage.textContent =
+            event.target.dataset.message;
+    }
+});
